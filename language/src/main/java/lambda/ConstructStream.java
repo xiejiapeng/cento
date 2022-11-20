@@ -1,9 +1,11 @@
 package lambda;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 /*
 可以参考
@@ -46,6 +48,29 @@ public class ConstructStream {
         List<String> eles = Arrays.asList("1", "2", "3");
         //构造一个天然的parallel的流
         eles.parallelStream().forEach(System.out::println);
+    }
+
+    private static void fromIter() {
+        Iterator<Integer> iterator = new Iterator<Integer>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Integer next() {
+                return 10;
+            }
+        };
+
+        Iterable<Integer> iterable = () -> iterator;
+
+        /*
+        基于iterator的stream也是可以parallel的，但是需要先将数据读取出来再split。如果consume的时间开销远远大于读取iterator再split的开销的话，
+        还是值得做parallel的。
+        iterator构成的Spliterator在进行split的时候，读取MAX_BATCH数量的元素到数组中，构成ArraySpliterator返回作为新的split出来的Spliterator。
+         */
+        Stream<Integer> stream = StreamSupport.stream(iterable.spliterator(), true);
     }
 
     public static void main(String[] args) {
