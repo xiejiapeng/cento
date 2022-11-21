@@ -12,7 +12,7 @@ import java.util.stream.StreamSupport;
 https://blogs.oracle.com/javamagazine/post/java-parallel-streams-performance-benchmark
  */
 public class ConstructStream {
-    private static Stream<Integer> generateInts(int start, int end) {
+    public static Stream<Integer> generateInts(int start, int end) {
         /*
         range方法生成Spliterator，作为一个pipeline的source。我们使用的流Stream一般都是BaseStream的子类，而AbstractPipeline是
         BaseStream的子类。多个AbstractPipeline构成一个链表，表示对source的一系列操作。
@@ -22,7 +22,7 @@ public class ConstructStream {
         return IntStream.range(start, end).boxed();
     }
 
-    private static void showFunctions() {
+    public static void showFunctions() {
         Stream<Integer> nums = generateInts(0, 100);
         /*
         通过parallel方法可以将这个pipeline的source stage的parallel属性设置为true。如果是parallel模式，执行的时候是转化为一个ForkJoinTask调度给线程池
@@ -44,13 +44,13 @@ public class ConstructStream {
         nums.distinct();
     }
 
-    private static void collectionStream() {
+    public static void collectionStream() {
         List<String> eles = Arrays.asList("1", "2", "3");
         //构造一个天然的parallel的流
         eles.parallelStream().forEach(System.out::println);
     }
 
-    private static void fromIter() {
+    public static void fromIter() {
         Iterator<Integer> iterator = new Iterator<Integer>() {
             @Override
             public boolean hasNext() {
