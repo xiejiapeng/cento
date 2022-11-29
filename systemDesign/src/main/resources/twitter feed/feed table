@@ -1,0 +1,12 @@
+
+table userInfo
+user,name
+A,alice
+B1,bob,
+B2,kite
+
+table relation
+subscriptor,user,last_modified_time
+A,B1,xxx
+A,B2,xxx
+B1,A,xxx
