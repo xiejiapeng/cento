@@ -1,7 +1,7 @@
-package com.twitter.service;
+package com.twitter.client.service;
 
-import com.twitter.model.Twit;
-import com.twitter.model.User;
+import com.twitter.common.model.Twit;
+import com.twitter.common.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

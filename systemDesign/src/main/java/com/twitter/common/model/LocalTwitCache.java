@@ -1,4 +1,4 @@
-package com.twitter.model;
+package com.twitter.common.model;
 
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
