@@ -40,7 +40,7 @@ public class ReceivePostController {
         twit.setUserId(userId);
         userTwitSaveResopitory.saveTwit(twit);
 
-        if(userProfileRepo.isPopular(userId)) {
+        if(!userProfileRepo.isPopular(userId)) {
             List<User> subs = userRelationRepository.findAllSubscribtors(userId);
             subs.stream().map(u -> u.getUserId()).forEach(toId -> redirectService.redirect(userId, toId, twit));
         }
