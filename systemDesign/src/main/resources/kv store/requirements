@@ -1,0 +1,28 @@
+https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/RMGGPNXB3XE
+
+see dynamo!!!
+https://blog.scottlogic.com/2020/09/08/deconstructing-dynamo.html
+
+functional requirements
+configurable service
+ability to always write
+hardware heterogeneity
+
+non-functional requirements
+scalable
+    consistent hashing with virtual nodes
+available
+    replication
+        primary-secondary relationship
+            lag
+            single point of failure
+        peer-to-peer relationship
+fault tolerance
+
+100
+a,b
+[x,y] f[x][y]
+throw a at i-th floor
+if a broken: 1 + (i-x)
+if a not broken: 1 + f[i+1][y]
+min_i max(1+i-x,1+f[i+1][y])

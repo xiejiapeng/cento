@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+message Node {
+  required string key=1;
+  required bytes value=2;
+  optional int64 version=3;
+
+
+}
