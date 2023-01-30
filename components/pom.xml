@@ -9,6 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <modules>
+        <module>spark</module>
+    </modules>
+
     <artifactId>components</artifactId>
 
     <properties>
