@@ -1,5 +1,9 @@
 package solutions;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 public class L32 {
     public int longestValidParentheses(String s) {
         int n = s.length();
@@ -32,7 +36,40 @@ public class L32 {
         return max;
     }
 
+    public int longestValidParentheses2(String s) {
+        Stack<Integer> stack = new Stack<>();
+        int curScore = 0;
+        int start = -1;
+        int max = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == '('){
+                stack.add(i);
+                curScore++;
+            } else {
+                if(curScore > 0) {
+                    int top = stack.pop();
+                    curScore--;
+                    max = Math.max(max, i - top + 1);
+
+                    if(start == -1) {
+                        start = top;
+
+                    }
+
+                    if(start != -1 && curScore == 0){
+                        max = Math.max(max, i - start + 1);
+                    }
+                } else {
+                    start = -1;
+                }
+            }
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new L32().longestValidParentheses("()(()"));
+        System.out.println(new L32().longestValidParentheses2("(()()"));
+        Map<Integer,Integer> m = new HashMap();
     }
 }
