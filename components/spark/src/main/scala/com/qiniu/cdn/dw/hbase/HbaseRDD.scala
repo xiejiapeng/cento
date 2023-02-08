@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.dw.hbase
+package com.qiniu.cdn.dw.hbase
 
 import com.qiniu.cdn.dw.DistributedScan
 import com.qiniu.defy.commons.common.avro.StandardizedLog

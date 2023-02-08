@@ -1,4 +1,4 @@
-package main.java.com.qiniu.cdn;
+package qiniu.cdn;
 
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;

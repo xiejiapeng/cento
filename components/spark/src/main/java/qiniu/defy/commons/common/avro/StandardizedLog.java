@@ -3,7 +3,7 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package main.java.com.qiniu.defy.commons.common.avro;
+package qiniu.defy.commons.common.avro;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {

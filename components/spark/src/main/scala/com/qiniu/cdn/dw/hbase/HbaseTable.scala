@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.dw.hbase
+package com.qiniu.cdn.dw.hbase
 
 import com.qiniu.cdn.dw.DistributedScan
 import org.apache.hadoop.conf.Configuration

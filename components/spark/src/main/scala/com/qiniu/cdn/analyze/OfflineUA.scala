@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.analyze
+package com.qiniu.cdn.analyze
 
 import com.qiniu.cdn.{Commons, Functions}
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}

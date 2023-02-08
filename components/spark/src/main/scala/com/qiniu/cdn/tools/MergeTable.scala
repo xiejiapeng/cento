@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.tools
+package com.qiniu.cdn.tools
 
 import org.apache.commons.cli._
 import org.apache.commons.lang.StringUtils

@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.dw.hbase
+package com.qiniu.cdn.dw.hbase
 
 import org.apache.spark.sql.connector.catalog.{Table, TableProvider}
 import org.apache.spark.sql.connector.expressions.Transform

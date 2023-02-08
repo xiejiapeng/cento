@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.starrocks
+package com.qiniu.cdn.starrocks
 
 import org.apache.spark.sql.SparkSession
 

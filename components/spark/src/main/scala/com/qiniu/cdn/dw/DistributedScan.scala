@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.dw
+package com.qiniu.cdn.dw
 
 import org.apache.hadoop.hbase.client.Scan
 import org.apache.hadoop.hbase.util.Bytes

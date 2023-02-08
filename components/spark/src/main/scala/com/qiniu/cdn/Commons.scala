@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn
+package com.qiniu.cdn
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{col, current_timestamp, from_json, from_unixtime}

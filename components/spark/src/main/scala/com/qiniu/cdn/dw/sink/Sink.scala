@@ -1,4 +1,4 @@
-package main.scala.com.qiniu.cdn.dw.sink
+package com.qiniu.cdn.dw.sink
 
 import com.qiniu.cdn.{Commons, Functions}
 import org.apache.spark.sql.SparkSession
