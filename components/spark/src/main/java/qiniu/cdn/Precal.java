@@ -10,6 +10,10 @@ import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsIni
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 public class Precal {
     public static final String bootStrapServer = "jjh645:19092";
     public static final String sourceTopic = "cdnlog-raw-0";

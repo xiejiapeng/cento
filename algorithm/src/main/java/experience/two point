@@ -1,0 +1,11 @@
+# 双指针
+
+## 标准做法
+参考L76
+有一个需要满足的条件condition
+有一个可以滑动的数组或者字符串，初始时left，right=0
+初始状态下，right=0；此时滑动right来满足condition。满足condition条件后，再滑动left一个单位来破坏condition条件。
+记住，在for循环里，先滑动right满足condition，再滑动left破坏condition。在滑动right的时候记住不能超过数组边界。
+
+right变量代表上次滑动完的边界（不包含），也就是这次滑动开始时的位置。这次滑动循环结束以后，right仍然要满足这个性质。所以在计算
+这次的区间长度时，用right-left即可，因为此时的right经过滑动循环后，已经代表了本次滑动的边界了（不包含）。它包含在下次滑动的范围中。
