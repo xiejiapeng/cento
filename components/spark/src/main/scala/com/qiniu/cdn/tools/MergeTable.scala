@@ -18,7 +18,7 @@ import java.util.UUID
  *    2. 支持定义压缩比例 todo
  *    3. 支持压缩多个分区
  *    4. 处理stream table的fileIndex的问题 -> spark.sql.streaming.fileStreamSink.ignoreMetadata=false
- *    5. 怎么通知其他地方对表进行refresh呢？
+ *    5. 通知其他地方对表进行refresh？
  */
 object MergeTable {
 
