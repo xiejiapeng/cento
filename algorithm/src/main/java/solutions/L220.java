@@ -1,9 +1,12 @@
 package solutions;
 
+import java.util.Stack;
 import java.util.TreeMap;
 
 public class L220 {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
+        Stack<Integer> stack = new Stack<>();
+
         TreeMap<Integer,Integer> m = new TreeMap<>();
         for(int i = 0; i < nums.length; i++){
             int remove = i - indexDiff - 1;
