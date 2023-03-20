@@ -1,0 +1,9 @@
+# 二分
+
+固定左右边界[left,right]，表示查找空间，且left和right都可选
+while永远写成while(left<=right)
+在while循环内部区分
+- left == right
+- left == right - 1
+- else
+这种写法保险一点
