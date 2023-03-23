@@ -7,3 +7,8 @@ while永远写成while(left<=right)
 - left == right - 1
 - else
 这种写法保险一点
+
+## 二分寻找最值
+对于某个判定条件（比如长度）len，通过O(n)的方式判定这个长度是否可行。则可以在O(nlogn)的时间复杂度内寻找满足条件的最大/小len。
+这个需要依赖len的一个性质，即二分性。如果不具有二分性，可以强行添加限制条件。比如L395
+https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/solution/xiang-jie-mei-ju-shuang-zhi-zhen-jie-fa-50ri1/

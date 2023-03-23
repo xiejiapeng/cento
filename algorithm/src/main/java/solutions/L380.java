@@ -98,5 +98,8 @@ public class L380 {
         r.insert(2);
         r.remove(1);
         System.out.println(r.getRandom());
+        Random random = new Random();
+        random.nextInt(100);
+
     }
 }
