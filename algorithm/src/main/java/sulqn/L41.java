@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 /*
     [2,1,0]

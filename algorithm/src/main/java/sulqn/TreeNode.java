@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class TreeNode {
     int val;

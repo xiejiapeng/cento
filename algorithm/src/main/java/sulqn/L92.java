@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class L92 {
     public ListNode reverseBetween(ListNode head, int left, int right) {

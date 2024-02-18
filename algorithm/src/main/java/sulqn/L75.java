@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 import java.util.Arrays;
 

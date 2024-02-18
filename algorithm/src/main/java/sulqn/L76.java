@@ -1,8 +1,7 @@
-package solutions;
+package sulqn;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 /*
 s,t

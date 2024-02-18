@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class L25 {
     public ListNode reverseKGroup(ListNode head, int k) {

@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class L137 {
     public int singleNumber(int[] nums) {

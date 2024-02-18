@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class L147 {
     public ListNode insertionSortList(ListNode head) {

@@ -1,4 +1,4 @@
-package solutions;
+package sulqn;
 
 public class L59 {
     int[][] dir = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
