@@ -1,8 +1,10 @@
 package sulwish;
 
-import org.apache.spark.sql.sources.In;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.PriorityQueue;
 
 /*
 数对 (a,b) 由整数 a 和 b 组成，其数对距离定义为 a 和 b 的绝对差值。

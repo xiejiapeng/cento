@@ -12,12 +12,9 @@ package sulwish;
 给你一个整数数组 fruits ，返回你可以收集的水果的 最大 数目。
  */
 
-import org.apache.spark.sql.sources.In;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class L904 {
     public int totalFruit(int[] fruits) {
