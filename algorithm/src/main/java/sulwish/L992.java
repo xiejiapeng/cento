@@ -9,8 +9,45 @@ package sulwish;
 子数组 是数组的 连续 部分。
  */
 
+import org.apache.spark.sql.sources.In;
+
+import javax.annotation.Priority;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+
 public class L992 {
     public int subarraysWithKDistinct(int[] nums, int k) {
-        return 0;
+        int cnt = 0;
+        Map<Integer,Integer> all = new HashMap<>();
+        Map<Integer,Integer> last = new HashMap<>();
+        PriorityQueue<Integer> mq = new PriorityQueue<>();
+        for (int left = 0, right = 0; right < nums.length; right++) {
+            all.put(nums[right], all.getOrDefault(nums[right], 0) + 1);
+            if(last.containsKey(nums[right])){
+                mq.remove(last.get(nums[right]));
+            }
+            last.put(nums[right], right);
+            mq.add(right);
+            while (left <= right && all.size() > k) {
+                int x = nums[left];
+                if(all.get(x) == 1)all.remove(x);
+                else all.put(x, all.get(x) - 1);
+                if(last.get(x) == left){
+                    last.remove(x);
+                    mq.remove(left);
+                }
+                left++;
+            }
+            if(left <= right && all.size() == k){
+                int min = mq.peek();
+                cnt += (min - left + 1);
+            }
+        }
+        return cnt;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new L992().subarraysWithKDistinct(new int[]{1,2,1,2,3}, 2));
     }
 }

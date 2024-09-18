@@ -15,10 +15,12 @@ public class WC {
     public static void main(String[] args) throws Exception {
         // 1.准备环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment();
+        env.setParallelism(2);
         // 设置运行模式
         env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC);
         // 2.加载数据源
-        DataStreamSource<String> elementsSource = env.socketTextStream("127.0.0.1", 30001);
+        DataStreamSource<String> elementsSource = env.socketTextStream("127.0.0.1", 30001)
+                .setParallelism(1);
         // 3.数据转换
         DataStream<String> flatMap = elementsSource.flatMap(new FlatMapFunction<String, String>() {
             @Override
@@ -28,13 +30,13 @@ public class WC {
                     out.collect(word);
                 }
             }
-        });
+        }).setParallelism(2);
         DataStream<Tuple2<String, Integer>> counts =
                 // split up the lines in pairs (2-tuples) containing: (word,1)
                 flatMap.flatMap(new Tokenizer())
                         // group by the tuple field "0" and sum up tuple field "1"
                         .keyBy(value -> value.f0)
-                        .sum(1);
+                        .sum(1).setMaxParallelism(2);
 
         // 4.数据输出
         counts.print();
