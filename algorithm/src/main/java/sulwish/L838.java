@@ -21,7 +21,6 @@ LL.RR.LLRRLL..
 
  */
 
-import org.apache.spark.sql.sources.In;
 
 import java.util.Arrays;
 
