@@ -5,10 +5,6 @@ package sulwish;
 如果寻找过程在这个文件中会重复多次，而每次寻找的单词不同，你能对此优化吗?
  */
 
-import org.apache.spark.sql.sources.In;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class M1711 {
     public int findClosest(String[] words, String word1, String word2) {

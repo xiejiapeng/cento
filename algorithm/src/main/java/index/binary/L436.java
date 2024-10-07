@@ -9,7 +9,6 @@ package index.binary;
 如果某个区间 i 不存在对应的 右侧区间 ，则下标 i 处的值设为 -1 。
  */
 
-import org.apache.spark.sql.sources.In;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -6,7 +6,6 @@ package sulwish;
 例如，前几个数按顺序应该是 1，3，5，7，9，15，21。
  */
 
-import org.apache.spark.sql.sources.In;
 
 import java.util.ArrayList;
 import java.util.HashSet;
