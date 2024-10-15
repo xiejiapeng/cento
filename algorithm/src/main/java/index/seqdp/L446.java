@@ -21,7 +21,6 @@ import java.util.Map;
  */
 public class L446 {
     public int numberOfArithmeticSlices(int[] nums) {
-        Arrays.sort(nums);
         int n = nums.length;
         Map<Long,Long>[] seqs = new HashMap[n];
         Map<Long, Long>[] all = new HashMap[n];
@@ -29,30 +28,29 @@ public class L446 {
         for (int i = 0; i < n; i++){
             seqs[i] = new HashMap<>();
             all[i] = new HashMap<>();
-            if(i == 0) {
-//                all[i].put(nums[i], 1);
-            } else {
-                for (int j = i - 1; j > -1; j--) {
-                    long diff = nums[i] - nums[j];
-                    long target = nums[j] - diff;
-                    long cnt = all[j].getOrDefault(target, 0l);
-                    if(cnt > 0) {
-                        ans += cnt;
-                        seqs[i].put(diff, seqs[i].getOrDefault(diff,0l) + cnt);
-                    }
-                    long t = seqs[j].getOrDefault(diff, 0l);
-                    if(t > 0){
-                        ans += t;
-                        seqs[i].put(diff, seqs[i].getOrDefault(diff, 0l) + t);
-                    }
+            for (int j = i - 1; j > -1; j--) {
+                long diff = (long)nums[i] - (long)nums[j];
+                long target = (long)nums[j] - diff;
+                long cnt = all[j].getOrDefault(target, 0l);
+                if(cnt > 0) {
+                    ans += cnt;
+                    seqs[i].put(diff, seqs[i].getOrDefault(diff,0l) + cnt);
                 }
+                long t = seqs[j].getOrDefault(diff, 0l);
+                if(t > 0){
+                    ans += t;
+                    seqs[i].put(diff, seqs[i].getOrDefault(diff, 0l) + t);
+                }
+            }
+            if(i != 0) {
                 all[i].putAll(all[i-1]);
                 all[i].put((long)(nums[i-1]), all[i].getOrDefault((long)nums[i-1], 0l) + 1);
             }
+
         }
-        System.out.println(Arrays.toString(nums));
-        System.out.println(Arrays.toString(all));
-        System.out.println(Arrays.toString(seqs));
+//        System.out.println(Arrays.toString(nums));
+//        System.out.println(Arrays.toString(all));
+//        System.out.println(Arrays.toString(seqs));
 
         return ans;
     }
