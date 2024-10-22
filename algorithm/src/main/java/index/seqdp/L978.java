@@ -27,12 +27,11 @@ public class L978 {
                 f[i][0] = 1;
                 f[i][1] = 1;
             } else {
-                for (int j = i + 1; j < n; j++){
-                    if(arr[j] > arr[i]) {
-                        f[i][0] =Math.max(f[i][0], f[j][1]+1);
-                    } else if(arr[j] < arr[i]) {
-                        f[i][1] = Math.max(f[i][1], f[j][0] + 1);
-                    }
+                //todo 子数组，不是子序列
+                if(arr[i+1] > arr[i]) {
+                    f[i][0] =Math.max(f[i][0], f[i+1][1]+1);
+                } else if(arr[i+1] < arr[i]) {
+                    f[i][1] = Math.max(f[i][1], f[i+1][0] + 1);
                 }
             }
 
@@ -40,5 +39,10 @@ public class L978 {
             max = Math.max(max, f[i][1]);
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        //9 4 10 7 8 1 9
+        System.out.println(new L978().maxTurbulenceSize(new int[]{9,4,2,10,7,8,8,1,9}));
     }
 }
