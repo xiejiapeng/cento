@@ -1,7 +1,7 @@
 package com.qiniu.cdn.dw.hbase
 
 import com.qiniu.cdn.dw.DistributedScan
-import com.qiniu.defy.commons.common.avro.StandardizedLog
+import qiniu.defy.commons.common.avro.StandardizedLog
 import org.apache.avro.file.{DataFileReader, SeekableByteArrayInput}
 import org.apache.avro.specific.SpecificDatumReader
 import org.apache.hadoop.hbase.TableName

@@ -7,7 +7,7 @@ package qiniu.defy.commons.common.avro;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StandardizedLog\",\"namespace\":\"com.qiniu.defy.commons.common.avro\",\"fields\":[{\"name\":\"cdn_provider\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"client_ip\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"content_type\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"domain\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"url\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"response_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_ip\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_method\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"scheme\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_protocol\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"status_code\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_range\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"body_bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"hitmiss\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_referer\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"ua\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_port\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"first_byte_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_x_forward_for\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_id\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"sent_http_content_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_body_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"upstream_response_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_cookie\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"upstream_5xx\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"delay\",\"type\":\"long\",\"default\":0},{\"name\":\"server_region\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"pcdn_cdn_bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"pdn_flux_type\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"extras\",\"type\":{\"type\":\"map\",\"values\":\"string\",\"avro.java.string\":\"String\"},\"default\":{}}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StandardizedLog\",\"namespace\":\"qiniu.defy.commons.common.avro\",\"fields\":[{\"name\":\"cdn_provider\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"client_ip\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"content_type\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"domain\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"url\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"response_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_ip\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_method\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"scheme\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_protocol\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"status_code\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_range\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"body_bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"hitmiss\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_referer\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"ua\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"server_port\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"first_byte_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_x_forward_for\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_id\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"sent_http_content_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"request_body_length\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"upstream_response_time\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"http_cookie\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"upstream_5xx\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"delay\",\"type\":\"long\",\"default\":0},{\"name\":\"server_region\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"pcdn_cdn_bytes_sent\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"pdn_flux_type\",\"type\":\"string\",\"default\":\"-\"},{\"name\":\"extras\",\"type\":{\"type\":\"map\",\"values\":\"string\",\"avro.java.string\":\"String\"},\"default\":{}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public CharSequence cdn_provider;
   @Deprecated public CharSequence client_ip;
@@ -666,18 +666,18 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
   }
 
   /** Creates a new StandardizedLog RecordBuilder */
-  public static com.qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder() {
-    return new com.qiniu.defy.commons.common.avro.StandardizedLog.Builder();
+  public static qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder() {
+    return new qiniu.defy.commons.common.avro.StandardizedLog.Builder();
   }
   
   /** Creates a new StandardizedLog RecordBuilder by copying an existing Builder */
-  public static com.qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder(com.qiniu.defy.commons.common.avro.StandardizedLog.Builder other) {
-    return new com.qiniu.defy.commons.common.avro.StandardizedLog.Builder(other);
+  public static qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder(qiniu.defy.commons.common.avro.StandardizedLog.Builder other) {
+    return new qiniu.defy.commons.common.avro.StandardizedLog.Builder(other);
   }
   
   /** Creates a new StandardizedLog RecordBuilder by copying an existing StandardizedLog instance */
-  public static com.qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder(com.qiniu.defy.commons.common.avro.StandardizedLog other) {
-    return new com.qiniu.defy.commons.common.avro.StandardizedLog.Builder(other);
+  public static qiniu.defy.commons.common.avro.StandardizedLog.Builder newBuilder(qiniu.defy.commons.common.avro.StandardizedLog other) {
+    return new qiniu.defy.commons.common.avro.StandardizedLog.Builder(other);
   }
   
   /**
@@ -722,11 +722,11 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
 
     /** Creates a new Builder */
     private Builder() {
-      super(com.qiniu.defy.commons.common.avro.StandardizedLog.SCHEMA$);
+      super(qiniu.defy.commons.common.avro.StandardizedLog.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(com.qiniu.defy.commons.common.avro.StandardizedLog.Builder other) {
+    private Builder(qiniu.defy.commons.common.avro.StandardizedLog.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.cdn_provider)) {
         this.cdn_provider = data().deepCopy(fields()[0].schema(), other.cdn_provider);
@@ -863,8 +863,8 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Creates a Builder by copying an existing StandardizedLog instance */
-    private Builder(com.qiniu.defy.commons.common.avro.StandardizedLog other) {
-            super(com.qiniu.defy.commons.common.avro.StandardizedLog.SCHEMA$);
+    private Builder(qiniu.defy.commons.common.avro.StandardizedLog other) {
+            super(qiniu.defy.commons.common.avro.StandardizedLog.SCHEMA$);
       if (isValidValue(fields()[0], other.cdn_provider)) {
         this.cdn_provider = data().deepCopy(fields()[0].schema(), other.cdn_provider);
         fieldSetFlags()[0] = true;
@@ -1005,7 +1005,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'cdn_provider' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setCdnProvider(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setCdnProvider(CharSequence value) {
       validate(fields()[0], value);
       this.cdn_provider = value;
       fieldSetFlags()[0] = true;
@@ -1018,7 +1018,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'cdn_provider' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearCdnProvider() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearCdnProvider() {
       cdn_provider = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -1030,7 +1030,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'client_ip' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setClientIp(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setClientIp(CharSequence value) {
       validate(fields()[1], value);
       this.client_ip = value;
       fieldSetFlags()[1] = true;
@@ -1043,7 +1043,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'client_ip' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearClientIp() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearClientIp() {
       client_ip = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -1055,7 +1055,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'content_type' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setContentType(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setContentType(CharSequence value) {
       validate(fields()[2], value);
       this.content_type = value;
       fieldSetFlags()[2] = true;
@@ -1068,7 +1068,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'content_type' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearContentType() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearContentType() {
       content_type = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -1080,7 +1080,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'domain' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setDomain(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setDomain(CharSequence value) {
       validate(fields()[3], value);
       this.domain = value;
       fieldSetFlags()[3] = true;
@@ -1093,7 +1093,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'domain' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearDomain() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearDomain() {
       domain = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -1105,7 +1105,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'url' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setUrl(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setUrl(CharSequence value) {
       validate(fields()[4], value);
       this.url = value;
       fieldSetFlags()[4] = true;
@@ -1118,7 +1118,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'url' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUrl() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUrl() {
       url = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -1130,7 +1130,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'request_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestTime(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestTime(CharSequence value) {
       validate(fields()[5], value);
       this.request_time = value;
       fieldSetFlags()[5] = true;
@@ -1143,7 +1143,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'request_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestTime() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestTime() {
       request_time = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -1155,7 +1155,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'response_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setResponseTime(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setResponseTime(CharSequence value) {
       validate(fields()[6], value);
       this.response_time = value;
       fieldSetFlags()[6] = true;
@@ -1168,7 +1168,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'response_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearResponseTime() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearResponseTime() {
       response_time = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -1180,7 +1180,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'server_ip' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerIp(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerIp(CharSequence value) {
       validate(fields()[7], value);
       this.server_ip = value;
       fieldSetFlags()[7] = true;
@@ -1193,7 +1193,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'server_ip' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerIp() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerIp() {
       server_ip = null;
       fieldSetFlags()[7] = false;
       return this;
@@ -1205,7 +1205,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'request_method' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestMethod(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestMethod(CharSequence value) {
       validate(fields()[8], value);
       this.request_method = value;
       fieldSetFlags()[8] = true;
@@ -1218,7 +1218,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'request_method' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestMethod() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestMethod() {
       request_method = null;
       fieldSetFlags()[8] = false;
       return this;
@@ -1230,7 +1230,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'scheme' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setScheme(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setScheme(CharSequence value) {
       validate(fields()[9], value);
       this.scheme = value;
       fieldSetFlags()[9] = true;
@@ -1243,7 +1243,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'scheme' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearScheme() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearScheme() {
       scheme = null;
       fieldSetFlags()[9] = false;
       return this;
@@ -1255,7 +1255,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'server_protocol' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerProtocol(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerProtocol(CharSequence value) {
       validate(fields()[10], value);
       this.server_protocol = value;
       fieldSetFlags()[10] = true;
@@ -1268,7 +1268,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'server_protocol' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerProtocol() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerProtocol() {
       server_protocol = null;
       fieldSetFlags()[10] = false;
       return this;
@@ -1280,7 +1280,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'status_code' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setStatusCode(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setStatusCode(CharSequence value) {
       validate(fields()[11], value);
       this.status_code = value;
       fieldSetFlags()[11] = true;
@@ -1293,7 +1293,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'status_code' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearStatusCode() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearStatusCode() {
       status_code = null;
       fieldSetFlags()[11] = false;
       return this;
@@ -1305,7 +1305,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'http_range' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpRange(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpRange(CharSequence value) {
       validate(fields()[12], value);
       this.http_range = value;
       fieldSetFlags()[12] = true;
@@ -1318,7 +1318,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'http_range' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpRange() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpRange() {
       http_range = null;
       fieldSetFlags()[12] = false;
       return this;
@@ -1330,7 +1330,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setBytesSent(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setBytesSent(CharSequence value) {
       validate(fields()[13], value);
       this.bytes_sent = value;
       fieldSetFlags()[13] = true;
@@ -1343,7 +1343,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearBytesSent() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearBytesSent() {
       bytes_sent = null;
       fieldSetFlags()[13] = false;
       return this;
@@ -1355,7 +1355,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'body_bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setBodyBytesSent(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setBodyBytesSent(CharSequence value) {
       validate(fields()[14], value);
       this.body_bytes_sent = value;
       fieldSetFlags()[14] = true;
@@ -1368,7 +1368,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'body_bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearBodyBytesSent() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearBodyBytesSent() {
       body_bytes_sent = null;
       fieldSetFlags()[14] = false;
       return this;
@@ -1380,7 +1380,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'hitmiss' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setHitmiss(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setHitmiss(CharSequence value) {
       validate(fields()[15], value);
       this.hitmiss = value;
       fieldSetFlags()[15] = true;
@@ -1393,7 +1393,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'hitmiss' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHitmiss() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHitmiss() {
       hitmiss = null;
       fieldSetFlags()[15] = false;
       return this;
@@ -1405,7 +1405,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'http_referer' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpReferer(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpReferer(CharSequence value) {
       validate(fields()[16], value);
       this.http_referer = value;
       fieldSetFlags()[16] = true;
@@ -1418,7 +1418,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'http_referer' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpReferer() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpReferer() {
       http_referer = null;
       fieldSetFlags()[16] = false;
       return this;
@@ -1430,7 +1430,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'ua' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setUa(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setUa(CharSequence value) {
       validate(fields()[17], value);
       this.ua = value;
       fieldSetFlags()[17] = true;
@@ -1443,7 +1443,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'ua' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUa() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUa() {
       ua = null;
       fieldSetFlags()[17] = false;
       return this;
@@ -1455,7 +1455,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'server_port' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerPort(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerPort(CharSequence value) {
       validate(fields()[18], value);
       this.server_port = value;
       fieldSetFlags()[18] = true;
@@ -1468,7 +1468,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'server_port' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerPort() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerPort() {
       server_port = null;
       fieldSetFlags()[18] = false;
       return this;
@@ -1480,7 +1480,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'first_byte_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setFirstByteTime(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setFirstByteTime(CharSequence value) {
       validate(fields()[19], value);
       this.first_byte_time = value;
       fieldSetFlags()[19] = true;
@@ -1493,7 +1493,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'first_byte_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearFirstByteTime() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearFirstByteTime() {
       first_byte_time = null;
       fieldSetFlags()[19] = false;
       return this;
@@ -1505,7 +1505,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'http_x_forward_for' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpXForwardFor(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpXForwardFor(CharSequence value) {
       validate(fields()[20], value);
       this.http_x_forward_for = value;
       fieldSetFlags()[20] = true;
@@ -1518,7 +1518,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'http_x_forward_for' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpXForwardFor() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpXForwardFor() {
       http_x_forward_for = null;
       fieldSetFlags()[20] = false;
       return this;
@@ -1530,7 +1530,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'request_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestLength(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestLength(CharSequence value) {
       validate(fields()[21], value);
       this.request_length = value;
       fieldSetFlags()[21] = true;
@@ -1543,7 +1543,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'request_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestLength() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestLength() {
       request_length = null;
       fieldSetFlags()[21] = false;
       return this;
@@ -1555,7 +1555,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'request_id' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestId(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestId(CharSequence value) {
       validate(fields()[22], value);
       this.request_id = value;
       fieldSetFlags()[22] = true;
@@ -1568,7 +1568,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'request_id' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestId() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestId() {
       request_id = null;
       fieldSetFlags()[22] = false;
       return this;
@@ -1580,7 +1580,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'sent_http_content_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setSentHttpContentLength(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setSentHttpContentLength(CharSequence value) {
       validate(fields()[23], value);
       this.sent_http_content_length = value;
       fieldSetFlags()[23] = true;
@@ -1593,7 +1593,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'sent_http_content_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearSentHttpContentLength() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearSentHttpContentLength() {
       sent_http_content_length = null;
       fieldSetFlags()[23] = false;
       return this;
@@ -1605,7 +1605,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'request_body_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestBodyLength(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setRequestBodyLength(CharSequence value) {
       validate(fields()[24], value);
       this.request_body_length = value;
       fieldSetFlags()[24] = true;
@@ -1618,7 +1618,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'request_body_length' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestBodyLength() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearRequestBodyLength() {
       request_body_length = null;
       fieldSetFlags()[24] = false;
       return this;
@@ -1630,7 +1630,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'upstream_response_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setUpstreamResponseTime(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setUpstreamResponseTime(CharSequence value) {
       validate(fields()[25], value);
       this.upstream_response_time = value;
       fieldSetFlags()[25] = true;
@@ -1643,7 +1643,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'upstream_response_time' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUpstreamResponseTime() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUpstreamResponseTime() {
       upstream_response_time = null;
       fieldSetFlags()[25] = false;
       return this;
@@ -1655,7 +1655,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'http_cookie' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpCookie(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setHttpCookie(CharSequence value) {
       validate(fields()[26], value);
       this.http_cookie = value;
       fieldSetFlags()[26] = true;
@@ -1668,7 +1668,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'http_cookie' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpCookie() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearHttpCookie() {
       http_cookie = null;
       fieldSetFlags()[26] = false;
       return this;
@@ -1680,7 +1680,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'upstream_5xx' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setUpstream5xx(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setUpstream5xx(CharSequence value) {
       validate(fields()[27], value);
       this.upstream_5xx = value;
       fieldSetFlags()[27] = true;
@@ -1693,7 +1693,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'upstream_5xx' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUpstream5xx() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearUpstream5xx() {
       upstream_5xx = null;
       fieldSetFlags()[27] = false;
       return this;
@@ -1705,7 +1705,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'delay' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setDelay(long value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setDelay(long value) {
       validate(fields()[28], value);
       this.delay = value;
       fieldSetFlags()[28] = true;
@@ -1718,7 +1718,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'delay' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearDelay() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearDelay() {
       fieldSetFlags()[28] = false;
       return this;
     }
@@ -1729,7 +1729,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'server_region' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerRegion(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setServerRegion(CharSequence value) {
       validate(fields()[29], value);
       this.server_region = value;
       fieldSetFlags()[29] = true;
@@ -1742,7 +1742,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'server_region' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerRegion() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearServerRegion() {
       server_region = null;
       fieldSetFlags()[29] = false;
       return this;
@@ -1754,7 +1754,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'pcdn_cdn_bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setPcdnCdnBytesSent(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setPcdnCdnBytesSent(CharSequence value) {
       validate(fields()[30], value);
       this.pcdn_cdn_bytes_sent = value;
       fieldSetFlags()[30] = true;
@@ -1767,7 +1767,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'pcdn_cdn_bytes_sent' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearPcdnCdnBytesSent() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearPcdnCdnBytesSent() {
       pcdn_cdn_bytes_sent = null;
       fieldSetFlags()[30] = false;
       return this;
@@ -1779,7 +1779,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'pdn_flux_type' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setPdnFluxType(CharSequence value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setPdnFluxType(CharSequence value) {
       validate(fields()[31], value);
       this.pdn_flux_type = value;
       fieldSetFlags()[31] = true;
@@ -1792,7 +1792,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'pdn_flux_type' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearPdnFluxType() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearPdnFluxType() {
       pdn_flux_type = null;
       fieldSetFlags()[31] = false;
       return this;
@@ -1804,7 +1804,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Sets the value of the 'extras' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder setExtras(java.util.Map<CharSequence, CharSequence> value) {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder setExtras(java.util.Map<CharSequence, CharSequence> value) {
       validate(fields()[32], value);
       this.extras = value;
       fieldSetFlags()[32] = true;
@@ -1817,7 +1817,7 @@ public class StandardizedLog extends org.apache.avro.specific.SpecificRecordBase
     }
     
     /** Clears the value of the 'extras' field */
-    public com.qiniu.defy.commons.common.avro.StandardizedLog.Builder clearExtras() {
+    public qiniu.defy.commons.common.avro.StandardizedLog.Builder clearExtras() {
       extras = null;
       fieldSetFlags()[32] = false;
       return this;
