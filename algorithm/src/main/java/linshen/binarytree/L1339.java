@@ -10,31 +10,31 @@ import sulqn.TreeNode;
 
 public class L1339 {
     int mod = (int)(1e9+7);
-    int ans = Integer.MIN_VALUE;
+    long ans = Long.MIN_VALUE;
     public int maxProduct(TreeNode root) {
-        int sum = sum(root);
+        long sum = sum(root);
         dfs(root, sum);
-        return ans;
+        return (int)(ans%mod);
     }
 
-    private int sum(TreeNode root) {
+    private long sum(TreeNode root) {
         if(root == null)return 0;
         else return root.val + sum(root.left) + sum(root.right);
     }
 
-    private long dfs(TreeNode root, int sum) {
+    private long dfs(TreeNode root, long sum) {
         if(root == null)return 0;
         else {
             long x = dfs(root.left, sum);
             long y = dfs(root.right, sum);
             long s = (root.val + x + y);
             long left = sum - s;
-            long multi =  s * left;
-            ans = Math.max(ans, (int)(multi % mod));
-            if(ans == 998864274) {
-                System.out.println("sum="+sum+",s="+s+",left="+left);
-            }
-            return (int)s;
+            long multi = s * left;
+
+            //todo h：不能先mod，再max！！
+            ans = Math.max(ans, multi);
+
+            return s;
         }
     }
 }
