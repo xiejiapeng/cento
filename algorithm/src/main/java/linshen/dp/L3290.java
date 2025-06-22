@@ -33,6 +33,7 @@ public class L3290 {
                 } else if(m-j<n-i) {
                     dp[i][j] = 0;
                 } else {
+                    //todo h 注意没有dp[i+1][j]这种可能，因为i一定要选
                     dp[i][j] = Long.MIN_VALUE;
                     dp[i][j] = Math.max(dp[i][j], dp[i][j+1]);
                     dp[i][j] = Math.max(dp[i][j], (long)a[i] * (long)b[j] + dp[i+1][j+1]);
