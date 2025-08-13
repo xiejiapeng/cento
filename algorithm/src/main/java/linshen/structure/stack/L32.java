@@ -10,40 +10,22 @@ s[i] 为 '(' 或 ')'
 import java.util.Stack;
 
 public class L32 {
+    //todo hhhhhh 我的栈为什么总是这么弱...
     public int longestValidParentheses(String s) {
-        int n = s.length();
-        int[] sum = new int[n+1];
-        for (int i = 1; i <= n; i++){
-            sum[i] = sum[i-1] + (s.charAt(i-1) == '(' ? 1 : -1);
-        }
-        int max = 0;
         Stack<Integer> stack = new Stack<>();
-        for (int i = n - 1; i > -1; i--) {
-
-            int m = sum[i];
-            //find the nearest j that sum[j+1] < m
-            while (!stack.isEmpty() && sum[stack.peek()+1] >= m) {
-                stack.pop();
-            }
-            if(!stack.isEmpty()) {
-                int t = stack.peek() - 1;
-                for (int j = t; j > i; j--){
-                    if(sum[j+1]==m) {
-                        max = Math.max(max, j - i + 1);
-                        break;
-                    }
-                }
+        int max = 0;
+        stack.add(-1);
+        for (int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == '(') {
+                stack.add(i);
             } else {
-                int t = n - 1;
-                for (int j = t; j > i; j--){
-                    if(sum[j+1]==m) {
-                        max = Math.max(max, j - i + 1);
-                        break;
-                    }
+                if(stack.isEmpty()) {
+                    stack.add(i);
+                } else {
+                    stack.pop();
+                    if(!stack.isEmpty())max = Math.max(max, i - stack.peek());
                 }
             }
-
-            stack.add(i);
         }
         return max;
     }
