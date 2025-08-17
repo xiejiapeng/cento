@@ -18,7 +18,6 @@ package linshen.structure.stack;
 s 仅由小写英文字母组成。
  */
 
-import scala.Char;
 
 import java.util.Stack;
 

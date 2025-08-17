@@ -14,7 +14,6 @@ package linshen.structure.stack;
 ][][
  */
 
-import scala.Char;
 
 import java.util.Stack;
 

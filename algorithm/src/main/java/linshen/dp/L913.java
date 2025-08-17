@@ -40,7 +40,6 @@ m
 1 -> cat left
  */
 
-import scala.Int;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -17,7 +17,6 @@ answer[i] = 1，seq[i] 分给 B 。
 如果存在多个满足要求的答案，只需返回其中任意 一个 即可。
  */
 
-import scala.Char;
 
 import java.util.Stack;
 
