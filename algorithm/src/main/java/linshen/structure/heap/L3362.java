@@ -20,8 +20,46 @@ queries[i].length == 2
 0 <= li <= ri < nums.length
  */
 
-public class L3362 {
-    public int maxRemoval(int[] nums, int[][] queries) {
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
+public class L3362 {
+    //todo hhhhh 中等题分数之最！有一个套路，在做这种覆盖相关的贪心的时候，遍历的不是query，而是原数组；需要提前将query进行某种排序；比如871，需要被完成的课程可以类比于
+    //这里需要被覆盖的数组；当然，有点牵强，还是记住这道题比较好吧
+    public int maxRemoval(int[] nums, int[][] queries) {
+        PriorityQueue<int[]> idle = new PriorityQueue<>(Comparator.comparingInt(o -> -o[1]));
+        PriorityQueue<int[]> busy = new PriorityQueue<>(Comparator.comparingInt(o -> o[0]));
+        for (int i = 0; i < queries.length; i++){
+            busy.add(queries[i]);
+        }
+        int n = nums.length;
+        int[] diff = new int[n+1];
+        int s = 0;
+        for (int i = 0; i < nums.length; i++){
+            s += diff[i];
+            while (!busy.isEmpty() && busy.peek()[0] <= i) {
+                idle.add(busy.poll());
+            }
+            int acc = s;
+            while (acc < nums[i]) {
+                if(idle.isEmpty()) {
+                    return -1;
+                } else {
+                    int[] id = idle.poll();
+                    if(id[1] >= i){
+                        diff[id[0]]++;
+                        s++;
+                        diff[id[1]+1]--;
+                        acc += 1;
+                    }
+
+                }
+            }
+        }
+        return busy.size() + idle.size();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new L3362().maxRemoval(new int[]{0,0,3}, new int[][]{{0,2},{1,1},{0,0},{0,0}}));
     }
 }
