@@ -15,9 +15,20 @@ n 块石头放置在二维平面中的一些整数坐标点上。每个坐标点
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
+/*
+*   *
+  *
+*   *
+ */
+
+/*
+* *
+*   *
+  * *
+ */
 
 public class L947 {
-    int N = 10005;
     static class UnionFild {
         private int[] parent;
         private int[] size;
@@ -56,29 +67,19 @@ public class L947 {
         }
     }
     public int removeStones(int[][] stones) {
-        UnionFild row = new UnionFild(N);
-        UnionFild column = new UnionFild(N);
-        Map<Integer,Integer> r = new HashMap<>();
-        Map<Integer, Integer> c = new HashMap<>();
+        UnionFild all = new UnionFild(stones.length);
+        //todo hhh 很简单的一题，不要复杂化了；多画画图构造并查集
         for (int i = 0; i < stones.length; i++){
-            int[] stone = stones[i];
-            int x = stone[0];
-            int y = stone[1];
-            if(r.containsKey(x)) {
-                row.merge(r.get(x), i);
+            for (int j = i + 1; j < stones.length; j++){
+                if(stones[i][0] == stones[j][0] || stones[i][1] == stones[j][1]) {
+                    all.merge(i, j);
+                }
             }
-            if(c.containsKey(y)) {
-                column.merge(c.get(y), i);
-            }
-            r.put(x, i);
-            c.put(y, i);
         }
-        int ans = 0;
-        for (int i = 0; i < stones.length; i++){
-            int x = stones[i][0];
-            int y = stones[i][1];
-            if(row.find(x) != x || column.find(y) != y)ans++;
-        }
-        return ans;
+        return stones.length - all.cnt;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new L947().removeStones(new int[][]{{0,0},{0,2},{1,1},{2,0},{2,2}}));
     }
 }
