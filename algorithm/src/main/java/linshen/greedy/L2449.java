@@ -12,17 +12,28 @@ package linshen.greedy;
 请你返回将 nums 变得与 target 相似的最少操作次数。测试数据保证 nums 一定能变得与 target 相似。
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class L2449 {
     /*
     1 2 5
     1 3 4
      */
+    //todo hhhhh 没有能解决，cp，注意奇偶分离
     public long makeSimilar(int[] nums, int[] target) {
-        int n = nums.length;
-
+        f(nums);
+        f(target);
+        long ans = 0L;
+        for (int i = 0; i < nums.length; ++i)
+            ans += Math.abs(nums[i] - target[i]);
+        return ans / 4;
     }
+
+    private void f(int[] a) {
+        // 由于元素都是正数，把奇数变成相反数，这样排序后奇偶就自动分开了
+        for (int i = 0; i < a.length; ++i)
+            if (a[i] % 2 != 0) a[i] = -a[i];
+        Arrays.sort(a);
+    }
+
 }
