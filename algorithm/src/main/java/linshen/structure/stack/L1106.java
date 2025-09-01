@@ -19,7 +19,6 @@ expression[i] 为 '('、')'、'&'、'|'、'!'、't'、'f' 和 ',' 之一
 输入：expression = "!(&(f,t))" 输出：true
  */
 
-import scala.Char;
 
 import java.util.HashMap;
 import java.util.Map;
