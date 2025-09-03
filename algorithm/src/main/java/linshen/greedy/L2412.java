@@ -27,7 +27,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class L2412 {
-    //todo hhhhh 脑子真的转不过来
+    //todo hhhhh 脑子真的转不过来，跳出算法，跳出推理，从自然角度出发去思考，最差的也是先亏钱
     public long minimumMoney(int[][] transactions) {
         return -1;
     }
