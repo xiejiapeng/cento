@@ -20,7 +20,11 @@ a 和 b 都只包含小写英文字母
  */
 
 public class L1616 {
-    //todo hhhhh 没能解决，记住吧
+    //todo hhhhh 没能解决，记住吧；但是原来的解法也是基本正确，只是忽视了由a来补的情况；
+    //回文没有固定套路，不能想的太复杂；回文是很强很强的约束；比如这题的a前缀+b后缀构成回文，
+    //对a和b的要求极高，直接遍历就能发现解法；只是当第一次不满足时，存在用a补和b补两种情况
+    //用a补不太容易想到，因为天然觉得是在a上选个地方切一刀，a的选择就固定了，剩余的都是b
+    //但是要记住，即使a和b不匹配了，也不意味着要在这里切一刀！！
     public boolean checkPalindromeFormation(String a, String b) {
         return check(a, b) || check(b, a);
     }
