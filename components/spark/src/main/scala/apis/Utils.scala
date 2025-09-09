@@ -19,6 +19,7 @@ import scala.reflect.runtime.universe
 
 
 object Utils {
+  case class Student(name: String, age: Int, address: String)
   def analyzed(spark: SparkSession, analyzer: Analyzer, df: DataFrame): Unit = {
     spark.sessionState.analyzer
     var logic = df.queryExecution.logical
@@ -32,7 +33,8 @@ object Utils {
           case (plan, rule) =>
             val result = rule(plan)
             if(!result.fastEquals(plan)) {
-              println(s"batch is ${batch.name}, rule is ${rule.ruleName} + before is $plan + after is $result")
+              println(s"batch is ${batch.name}, rule is ${rule.ruleName} + before is \n$plan + after is \n$result")
+              println("=====================")
             }
             result
         }
@@ -82,5 +84,16 @@ object Utils {
     })
   }
 
+  def prepare(spark: SparkSession): DataFrame = {
+    import spark.implicits._
 
+
+    val data = Seq(
+      Student("a", 10, "shanghai"),
+      Student("a", 10, "beijing"),
+      Student("b", 20, "shanghai"),
+      Student("b", 25, "beijing")
+    )
+    data.toDF
+  }
 }
