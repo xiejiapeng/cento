@@ -18,8 +18,9 @@ import scala.reflect.runtime.universe
  */
 
 
-object Utils6 {
+object Utils {
   def analyzed(spark: SparkSession, analyzer: Analyzer, df: DataFrame): Unit = {
+    spark.sessionState.analyzer
     var logic = df.queryExecution.logical
     val batches = analyzer.batches
     batches.foreach(batch => {
@@ -41,11 +42,11 @@ object Utils6 {
         lastPlan = curPlan
       }
       if(!curPlan.fastEquals(logic)) {
-        if(batch.name.equals("Resolution")) {
-          val insert = curPlan.asInstanceOf[InsertIntoStatement]
-          val relation = insert.table
-          println("relation type is " + relation.getClass)
-        }
+//        if(batch.name.equals("Resolution")) {
+//          val insert = curPlan.asInstanceOf[InsertIntoStatement]
+//          val relation = insert.table
+//          println("relation type is " + relation.getClass)
+//        }
         println("find here, rule is " + batch.name + ", before is\n " + logic + ", after is\n " + curPlan + ", batch is " + batch.name)
       }
       logic = curPlan

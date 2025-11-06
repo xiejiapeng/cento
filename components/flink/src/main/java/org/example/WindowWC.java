@@ -12,7 +12,6 @@ import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
-import org.apache.spark.sql.sources.In;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -61,6 +61,12 @@
             <artifactId>flink-table-api-java-bridge_2.12</artifactId>
             <version>${flink.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-catalyst_2.12</artifactId>
+            <version>3.2.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>
